@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="first_C_file.c" gcc -o $CFILE > C
+export CFILE="0-main.c" gcc -o $CFILE > C
