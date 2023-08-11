@@ -10,10 +10,15 @@
 int main(void)
 {
 	char c;
+	char a;
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		printf("%c\n", c);
+		printf("%c", c);
+	}
+	for (a = 'A'; a <= 'Z'; a++)
+	{
+		printf("%c\n", a);
 	}
 
 	return (0);
