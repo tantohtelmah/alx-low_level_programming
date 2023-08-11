@@ -3,8 +3,11 @@
 /* more headers goes there */
 #include <stdio.h>
 
-/** betty style doc for function main goes there
+/**
+* betty style doc for function main goes there
+*
 * main - prints random numbers and check if it is positive
+* Return: Always Zero
 */
 int main(void)
 {
@@ -14,11 +17,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0){
-		printf("is positive");
+		printf("is positive\n");
 	}else if(n==0){
-		printf("is zero");
+		printf("is zero\n");
 	}else 
-		printf("is negative");
+		printf("is negative\n");
 
 	return (0);
 }
