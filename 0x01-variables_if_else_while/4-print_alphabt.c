@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-* main - prints the letters of the alphabet in lowercase.
+* main - prints the letters of the alphabet in lowercase without 'q' and 'e'
 * Return: Always Zero
 */
 int main(void)
@@ -12,8 +12,11 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		printf("%c\n", c);
-	}
+		if (c != 'q' && c != 'e')
+		{
+		printf("%c", c);
+		}
 
+	}
 	return (0);
 }

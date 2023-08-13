@@ -3,17 +3,17 @@
 #include <stdio.h>
 
 /**
-* main - prints the letters of the alphabet in lowercase.
+* main - prints the single digit numbers of base 10.
 * Return: Always Zero
 */
 int main(void)
 {
-	char c;
+	int c;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (c = 0; c < 10; c++)
 	{
-		printf("%c\n", c);
+		printf("%d", c);
 	}
-
+	printf("\n");
 	return (0);
 }

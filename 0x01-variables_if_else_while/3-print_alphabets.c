@@ -2,10 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
-*
-* main - prints the letters of the alphabet in lowercase.
-* Results: Always Zero
+/**
+* main - prints the letters of the alphabet in lowercase and uppercase.
+* Return: Always Zero
 */
 int main(void)
 {
@@ -18,8 +17,9 @@ int main(void)
 	}
 	for (a = 'A'; a <= 'Z'; a++)
 	{
-		printf("%c\n", a);
+		printf("%c", a);
 	}
+	printf("\n");
 
 	return (0);
 }

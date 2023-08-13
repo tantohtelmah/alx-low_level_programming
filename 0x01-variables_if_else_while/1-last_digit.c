@@ -2,10 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
-*
-* main(void) - prints the last digit and describes the comparison to 0, 5 and 6
-* Results: Always Zero
+/**
+* main - prints the last digit and describes the comparison to 0, 5 and 6
+* Return: Always Zero
 */
 int main(void)
 {
