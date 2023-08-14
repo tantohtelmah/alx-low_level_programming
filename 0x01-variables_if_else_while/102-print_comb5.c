@@ -13,7 +13,7 @@ int main(void)
 	int x;
 	int y;
 	int rw;
-	int lwt;
+	int lw;
 
 	for (i = 48; i < 58; i++)
 	{
@@ -23,8 +23,8 @@ int main(void)
 			{
 				for (y = 48; y < 58; y++)
 				{
-					rwt = (x - 48) * 10 + (y - 48);
-					lwt = (i - 48) * 10 + (j - 48);
+					rw = (x - 48) * 10 + (y - 48);
+					lw = (i - 48) * 10 + (j - 48);
 					if ((i == j && j == x && x == y) || (i == x && j == y) || (rw < lw))
 					{
 						continue;
