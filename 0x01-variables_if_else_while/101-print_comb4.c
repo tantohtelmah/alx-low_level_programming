@@ -21,7 +21,7 @@ int main(void)
 				if (i == j || i == x || j == x)
 				{
 					continue;
-				}	
+				}
 				if (i > j || j > x || i > x)
 				{
 					continue;
@@ -34,7 +34,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}	
+			}
 		}
 	}
 	putchar('\n');
