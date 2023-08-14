@@ -3,18 +3,18 @@
 #include <stdio.h>
 
 /**
-* main - prints the single digit numbers of base 16.
+* main - prints the single digit numbers combination.
 * Return: Always Zero
 */
 int main(void)
 {
 	int c;
-	int a;
 
 	for (c = 48; c < 58; c++)
 	{
 		putchar(c);
-		putchar(', ');
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
