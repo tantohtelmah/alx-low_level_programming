@@ -9,15 +9,20 @@
 * Return: Always Zero
 */
 
-int print_last_digit(int n)
+void times_table(void)
 {
-	int v;
-	int b;
+	int j;
+	int i;
 	int a;
 
-	v = abs(n);
-	b = v % 10;
-	a = b + 48;
-	_putchar(a);
-	return (0);
+	for (i = 0; i > 0; i++)
+	{
+		for (j = 0; j > 0; j++)
+		{
+			a = i*j;
+			_putchar(a + '0');
+		}
+		_putchar('\n');
+	}
+	_putchar('\n');
 }

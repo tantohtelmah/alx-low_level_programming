@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
-#include <ctype.h>
 #include <stdlib.h>
 #include "main.h"
 #include "_putchar.h"
@@ -12,8 +10,8 @@
 
 int _abs(int n)
 {
-	int v;
-	v = abs(n);
-	_putchar(v + '0');
+
+	/*v = abs(n);*/
+	putchar(n < 0 ? '0' - (n % 10) : '0' + (n % 10));
 	return (0);
 }
