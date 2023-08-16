@@ -5,8 +5,9 @@
 #include "_putchar.h"
 
 /**
-* print_alphabet_x10 - Prints the alphabet in lowercase.ten times
-* Return: Always Zero
+* _isalpha - finds alphabets
+* @c: interger
+* Return: returns 1 if alphabet else 0
 */
 
 int _isalpha(int c)

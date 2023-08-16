@@ -5,8 +5,9 @@
 #include "_putchar.h"
 
 /**
-* print_alphabet_x10 - Prints the alphabet in lowercase.ten times
-* Return: Always Zero
+* _islower - checks for lowercase
+* @c: integer type
+* Return: returns 1 for lowercase and 0 otherwise
 */
 
 int _islower(int c)
