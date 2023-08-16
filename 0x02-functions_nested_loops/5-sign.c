@@ -5,8 +5,9 @@
 #include "_putchar.h"
 
 /**
-* print_sign - Prints 
-* Return: Always Zero
+* print_sign - Prints '+', '0', '-'
+* @n: integer
+* Return: Zero, one and negative one
 */
 
 int print_sign(int n)
