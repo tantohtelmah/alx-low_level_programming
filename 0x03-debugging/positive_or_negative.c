@@ -5,6 +5,7 @@
 
 /**
 * main - prints random numbers and check if it is positive
+* @n: integer
 * Return: Always Zero
 */
 void positive_or_negative(int n)
