@@ -3,20 +3,19 @@
 #include <string.h>
 
 /**
-* _puts - prints out the string
+* print_rev - prints out the string in reverse
 * @str: characters
 * Return: None
 */
 
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int len;
-	char str1;
-	
+	int i;
+
 	len = strlen(str);
-	str1 = str + len - 1;
-	while (str1 >= st)
+	for (i = len - 1; i >= 0; i--)
 	{
-		puts(str1);
-		str1--;r
+		_putchar(*(str + i));
+	}
 }
