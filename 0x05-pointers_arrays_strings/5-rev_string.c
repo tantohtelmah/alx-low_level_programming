@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include "_putchar.h"
+#include <stdio.h>
 
 
 /**
@@ -17,7 +18,7 @@ void rev_string(char *str)
 	len = strlen(str);
 	for (i = len - 1; i >= 0; i--)
 	{
-		_putchar(*(str + i));
+		putchar(*(str + i));
 	}
-	_putchar('\n');
+	putchar('\n');
 }
