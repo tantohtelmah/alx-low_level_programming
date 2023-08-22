@@ -3,9 +3,8 @@
 #include "_putchar.h"
 #include <stdio.h>
 
-
 /**
-* print_rev - prints out the string in reverse
+* rev_string - prints out the string in reverse
 * @str: characters
 * Return: None
 */
