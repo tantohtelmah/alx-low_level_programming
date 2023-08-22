@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.h"
 
 /**
 * print_array - prints the elements of an array
