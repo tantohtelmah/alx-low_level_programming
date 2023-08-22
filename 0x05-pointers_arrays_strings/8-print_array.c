@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* puts_half - prints the elements of an array
+* print_array - prints the elements of an array
 * @a: integer
 * @n: integer
 * Return: None

@@ -1,6 +1,6 @@
-#include "_putchar.h"
-#include <stdio.h>
+#include "main.h"
 #include <string.h>
+
 
 /**
 * print_rev - prints out the string in reverse
@@ -8,7 +8,7 @@
 * Return: None
 */
 
-void print_rev(char *str)
+void rev_string(char *str)
 {
 	int len;
 	int i;

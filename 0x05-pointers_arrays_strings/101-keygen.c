@@ -13,10 +13,9 @@ int main(void)
 {
 	char password[PASSWORD_LENGTH + 1];
 	int index;
-	const char charset[];
 	int i;
+	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-	charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	srand(time(NULL));
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
