@@ -22,7 +22,7 @@ int _atoi(char *s)
 		return (65536);
 	}
 	if (result < -65536)
-	}
+	{
 		return (-65536);
 	}
 		return ((int) result);
