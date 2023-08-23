@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <string.h>
 
 /**
 * _atoi - string to numbers
@@ -9,21 +9,16 @@
 
 int _atoi(char *s)
 {
-	char *endptr;
-	long int result = strtol(s, &endptr, 10);
-
-	result = strtol(s, &endptr, 10);
-	if (s == endptr)
+	int i;
+	int j;
+	
+	for (i = 0; i < (int)strlen(s); i++)
 	{
-		return (0);
+		for (j = 0; j < 256; j++)
+		{
+			_putchar(j);
+		}
 	}
-	if (result > 65536)
-	{
-		return (65536);
-	}
-	if (result < -65536)
-	{
-		return (-65536);
-	}
-		return ((int) result);
+	_putchar('\n');
+	return (j);
 }
