@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
 * _atoi - string to numbers
@@ -16,9 +17,12 @@ int _atoi(char *s)
 	{
 		for (j = 0; j < 256; j++)
 		{
-			_putchar(j);
+			if (j == (*(s + i)))
+			{
+				putchar(j);
+			}
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (j);
 }
