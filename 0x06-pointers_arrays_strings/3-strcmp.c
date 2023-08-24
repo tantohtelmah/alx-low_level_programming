@@ -13,14 +13,14 @@ int _strcmp(char *s1, char *s2)
 	int diff;
 	int i = 0;
 
-	while ((*(s1 + i)) != '\0' && (*(s2 + i)) != '\0')
+	while ((*(s1 + i)) != '\0' || (*(s2 + i)) != '\0')
 	{
-		if ((*(s1 + i)) != (*(s2 + i)))
+		diff = (*(s1 + i)) - (*(s2 + i));
+		if (diff)
 		{
-			diff = (*(s1 + i)) - (*(s2 + i));
+			break;
 		}
 		i++;
 	}
-	_putchar('\n');
 	return (diff);
 }
