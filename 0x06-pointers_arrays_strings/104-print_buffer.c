@@ -1,27 +1,34 @@
 #include <stdio.h>
 #include <ctype.h>
 
-void print_buffer(char *b, int size) 
+/**
+* print_buffer - prints buffer
+* @b: character
+* @size: int
+* return: none
+*/
+
+void print_buffer(char *b, int size)
 {
 	int i;
 	int j;
 	char c;
 
-	if (size <= 0) 
+	if (size <= 0)
 	{
-        	printf("\n");
-        	return;
+		printf("\n");
+		return;
 	}
-	for (i = 0; i < size; i += 10) 
+	for (i = 0; i < size; i += 10)
 	{
 		printf("%08x ", i);
-		for (j = 0; j < 10; j++) 
+		for (j = 0; j < 10; j++)
 		{
-			if (i + j < size) 
+			if (i + j < size)
 			{
 				printf("%02x ", b[i + j]);
 			}
-			 else
+			else
 			{
 				printf("   ");
 			}
@@ -40,6 +47,6 @@ void print_buffer(char *b, int size)
 			}
 		}
 		printf("\n");
-}
+	}
 }
 
