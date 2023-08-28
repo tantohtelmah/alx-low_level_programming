@@ -10,7 +10,7 @@
 
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	unsigned long int i = 0;
 
 	if (s == NULL)
 		return (NULL);
