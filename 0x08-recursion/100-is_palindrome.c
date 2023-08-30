@@ -26,12 +26,12 @@ int is_palindrome(char *s)
 int is_palindrome_helper(char *s, int l, int h)
 {
 	if (l >= h)
-    {
+	{
 		return (1);
-    }
+	}
 	if (s[l] != s[h])
-    {
+	{
 		return (0);
-    }
+	}
 	return (is_palindrome_helper(s, l + 1, h - 1));
-    }
+}
