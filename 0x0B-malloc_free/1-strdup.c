@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	{
 		t[i] = *(s + i);
 	}
-	if (len == 0)
+	if (len == 0 || str == NULL)
 	{
 		return (NULL);
 	}
