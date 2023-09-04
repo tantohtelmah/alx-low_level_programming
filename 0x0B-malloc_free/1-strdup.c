@@ -15,18 +15,19 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int len = strlen(str) + 1;
 
-	t = malloc(len);
-	for (i = 0; i < len; i++)
-	{
-		t[i] = *(s + i);
-	}
-	if (len == 0 || str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
+	}
+	t = malloc(len);
+	for (i = 0; i < strlen(str); i++)
+	{
+		t[i] = *(s + i);
 	}
 	if (t == NULL)
 	{
 		return (NULL);
+		exit(EXIT_SUCCESS);
 	}
 	return (t);
 	free(t);
