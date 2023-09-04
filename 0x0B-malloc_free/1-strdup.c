@@ -16,6 +16,10 @@ char *_strdup(char *str)
 	unsigned int len = strlen(str);
 
 	t = malloc(len);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < len; i++)
 	{
 		t[i] = *(s + i);
