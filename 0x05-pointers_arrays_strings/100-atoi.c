@@ -1,28 +1,27 @@
-#include "main.h"
-#include <string.h>
 #include <stdio.h>
 
-/**
-* _atoi - string to numbers
-* @s: character
-* Return: integer
-*/
+int _atoi(char *s) {
+    int sign = 1;
+    int result = 0;
+    int i = 0;
 
-int _atoi(char *s)
-{
-	int i;
-	int j;
-	
-	for (i = 0; i < (int)strlen(s); i++)
-	{
-		for (j = 0; j < 256; j++)
-		{
-			if (j == (*(s + i)))
-			{
-				putchar(j);
-			}
-		}
-	}
-	putchar('\n');
-	return (j);
+    if (s[0] == '-') {
+        sign = -1;
+        i++;
+    }
+
+    if (s[0] == '+') {
+        i++;
+    }
+
+    while (s[i] != '\0') {
+        if (s[i] >= '0' && s[i] <= '9') {
+            result = result * 10 + (s[i] - '0');
+        } else {
+            break;
+        }
+        i++;
+    }
+
+    return sign * result;
 }

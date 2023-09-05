@@ -9,27 +9,24 @@
  * Return: character
 */
 
+
 char *str_concat(char *s1, char *s2)
 {
-	char *x1 = s1;
-	char *x2 = s1;
-	char *t;
+	int len1 = 0, len2 = 0;
+	char *result = NULL;
 
-	t = malloc(strlen(s1) + strlen(s2) + 1);
-	if (t != NULL)
-	{
-		while (*x1 != '\0')
-		{
-			*t = *x1;
-			x1++;
-			t++;
-		}
-		while (*x2 != '\0')
-		{
-			*t = *x2;
-			x2++;
-			t++;
-		}
-	}
-	return (t);
+	if (s1 == NULL)
+		s1 = "";
+    if (s2 == NULL)
+		s2 = "";
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
+	result = malloc(len1 + len2 + 1);
+	if (result == NULL)
+		return (NULL);
+	memcpy(result, s1, len1);
+	memcpy(result + len1, s2, len2 + 1);
+	return (result);
 }

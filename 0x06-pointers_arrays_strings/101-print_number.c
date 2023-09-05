@@ -14,6 +14,7 @@ void print_number(int n)
 	positive_numbers(n);
 	negative_numbers(n);
 }
+
 /**
 * positive_number - prints positive numbers
 * @n: int
