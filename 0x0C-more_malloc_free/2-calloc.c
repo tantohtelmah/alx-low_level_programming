@@ -5,7 +5,7 @@
 /**
  * _calloc - creates an array of characters
  * @nmemb: unsigned int
- * @nsize: unsigned int
+ * @size: unsigned int
  * Return: none
 */
 
@@ -13,12 +13,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *t;
 
-	t = calloc(nmemb, size);
+	t = malloc(nmemb * size);
 	if (nmemb == 0 || size == 0)
 	{
 		t = NULL;
 	}
 	if (t == NULL)
 		return (NULL);
+	memset(t, 0, nmemb * size);
 	return (t);
 }
