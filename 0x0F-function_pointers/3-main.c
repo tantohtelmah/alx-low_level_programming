@@ -13,7 +13,7 @@ int main(int argc, char argv[])
 	int num2;
 	char operator;
 	int calc;
-	
+
 	if (argc != 3)
 	{
 		printf("Error");
