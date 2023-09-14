@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stddef.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * get_op_func - select function
@@ -21,9 +22,9 @@ int (*get_op_func(char *s))(int, int)
 	size_t i;
 
 	i = 0;
-	while (i < (sizeof(ops) / sizeof(ops[0])))
+	while (i < (sizeof(ops) / sizeof(ops[0]) - 1))
 	{
-		if (s == ops[i].op)
+		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
