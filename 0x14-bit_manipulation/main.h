@@ -12,6 +12,6 @@ unsigned int binary_to_uint(const char *b);
 int _putchar(char c);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
-unsigned long int decimal_to_binary(unsigned long int decimal);
+int set_bit(unsigned long int *n, unsigned int index);
 
 #endif /* MAIN_H */
