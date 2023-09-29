@@ -11,11 +11,17 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-
-	while (b[i] == '0' || b[i] == '1')
+	while (b[i] != '\0')
 	{
-		decimal <<= 1;
-		decimal += b[i] - '0';
+		if (!isdigit(b[i]))
+		{
+			return (0);
+		}
+		else
+		{
+			decimal <<= 1;
+			decimal += b[i] - '0';
+		}
 		i++;
 	}
 	return (decimal);
