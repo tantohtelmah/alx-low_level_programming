@@ -18,7 +18,10 @@ int create_file(const char *filename, char *text_content)
 		close(open_file);
 		return (-1);
 	}
-	write_file = write(open_file, text_content, strlen(text_content));
+	if (text_content != NULL)
+	{
+		write_file = write(open_file, text_content, strlen(text_content));
+	}
 	if (open_file == -1 && write_file == -1)
 	{
 		close(open_file);
