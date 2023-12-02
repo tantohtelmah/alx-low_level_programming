@@ -6,14 +6,14 @@
 *
 * Return: pointer to the newly created hash table
 */
-Hash_table_t *hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-	Hash_table_t *hash_table = NULL;
+	hash_table_t *hash_table = NULL;
 
 	if (size == 0)
 		return (NULL);
 
-	hash_table = malloc(sizeof(Hash_table_t));
+	hash_table = malloc(sizeof(hash_table_t));
 	if (hash_table == NULL)
 		return (NULL);
 
