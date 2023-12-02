@@ -25,5 +25,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
+	free(hash_table->items);
+	free(hash_table);
 	return (hash_table);
 }
