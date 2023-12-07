@@ -9,17 +9,22 @@
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
-int hash_table_set(Hash_table_t *ht, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     unsigned long int index;
-    hash_node_t *new_node = NULL, *temp = NULL;
+    hash_t *new_item = NULL, *temp = NULL;
+
+    printf("i am here\n");
 
     if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
         return (0);
+    printf("i am here\n");
+    index = key_index((unsigned char *)key, ht->size);
+    printf("%ld", index);
+    fflush(stdout);
+    temp = ht->items[index];
 
-    index = key_index((const unsigned char *)key, ht->size);
-    temp = ht->array[index];
-
+    printf("i am here\n");
     while (temp != NULL)
     {
         if (strcmp(temp->key, key) == 0)
@@ -33,27 +38,27 @@ int hash_table_set(Hash_table_t *ht, const char *key, const char *value)
         temp = temp->next;
     }
 
-    new_node = malloc(sizeof(hash_node_t));
-    if (new_node == NULL)
+    new_item = malloc(sizeof(hash_t));
+    if (new_item == NULL)
         return (0);
 
-    new_node->key = strdup(key);
-    if (new_node->key == NULL)
+    new_item->key = strdup(key);
+    if (new_item->key == NULL)
     {
-        free(new_node);
+        free(new_item);
         return (0);
     }
 
-    new_node->value = strdup(value);
-    if (new_node->value == NULL)
+    new_item->value = strdup(value);
+    if (new_item->value == NULL)
     {
-        free(new_node->key);
-        free(new_node);
+        free(new_item->key);
+        free(new_item);
         return (0);
     }
 
-    new_node->next = ht->array[index];
-    ht->array[index] = new_node;
+    new_item->next = ht->items[index];
+    ht->items[index] = new_item;
 
     return (1);
 }
