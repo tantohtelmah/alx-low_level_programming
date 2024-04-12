@@ -8,7 +8,7 @@
 * Return: interger
 */
 
-
+int binary_search(int *array, int low, int high, int value);
 int exponential_search(int *array, size_t size, int value)
 {
 	if (!array)
@@ -25,7 +25,7 @@ int exponential_search(int *array, size_t size, int value)
 
 	while (bound < size && array[bound] < value)
 	{
-		printf("Comparing with array[%d] = %d\n", bound, array[bound]);
+		printf("Value checked array[%d] = %d\n", bound, array[bound]);
 		bound *= 2;
 	}
 
@@ -35,6 +35,15 @@ int exponential_search(int *array, size_t size, int value)
 
 	return binary_search(array, low, high, value);
 }
+
+/**
+ * binary_search - searches with the binary search
+ * @array: array to be searched
+ * @low: interger
+ * @high: interger
+ * @value: value to search
+ * Return: interger
+*/
 
 int binary_search(int *array, int low, int high, int value)
 {
